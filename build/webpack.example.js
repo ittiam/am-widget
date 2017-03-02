@@ -11,7 +11,7 @@ module.exports = merge(base, {
   output: {
     path: path.resolve(__dirname, '../dist/example'),
     filename: '[name].js',
-    publicPath: '/wd.js/'
+    publicPath: '/am-widget/'
   },
   module: {
     rules: [
