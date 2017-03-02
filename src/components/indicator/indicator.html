@@ -1,0 +1,13 @@
+<div class="indicator">
+  <div class="indicator-wrapper indicator--hidden">
+    {{if spinner}}
+    {{# spinner}}
+    {{else}}
+    <div class="spinner-snake" data-role="spinner"></div>
+    {{/if}}
+    {{if text}}
+    <span class="indicator-text" v-show="text">{{ text }}</span>
+    {{/if}}
+  </div>
+  <div class="indicator-mask"></div>
+</div>

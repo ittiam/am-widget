@@ -1,0 +1,13 @@
+<div class="actionsheet">
+  <div class="actionsheet-mask mask-hook"></div>
+  <div class="actionsheet-panel panel-hook">
+    <div class="actionsheet-menu">
+      {{each data as item}}
+      <div class="actionsheet-cell" data-key="{{item.key}}">{{item.text}}</div>
+      {{/each}}
+    </div>
+    <div class="actionsheet-action">
+      <div class="actionsheet-cell actionsheet-cancel">取消</div>
+    </div>
+  </div>
+</div>

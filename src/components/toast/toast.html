@@ -1,0 +1,13 @@
+<div class="toast">
+  <div class="toast-wrapper toast--hidden">
+    <div class="toast-notice toast-{{type}}">
+      {{if type !== 'info'}}
+      <i class="toast-text-icon"></i>
+      {{/if}}
+      {{if content}}
+      <div class="toast-text">{{# content}}</div>
+      {{/if}}
+    </div>
+  </div>
+  <div class="toast-mask"></div>
+</div>
