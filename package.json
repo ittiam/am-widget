@@ -2,10 +2,10 @@
   "name": "am-widget",
   "version": "0.0.1",
   "description": "基于 jQuery 的移动 UI 组件",
-  "main": "dist/wd.js",
+  "main": "dist/am-wdget.js",
   "scripts": {
     "build": "webpack --config ./build/webpack.config.js",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.dev.js --inline --hot --port 8200",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.dev.js --inline --hot --port 9200",
     "build-example": "cross-env NODE_ENV=production webpack --config ./build/webpack.example.js",
     "gh": "gh-pages -d dist/example"
   },
