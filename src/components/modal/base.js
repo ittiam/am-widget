@@ -48,6 +48,7 @@ var Modal = Widget.extend({
     this.$dialog = $(html).appendTo(document.body);
     this.$mask = this.$dialog.find('.modal-mask');
     this.$wrapper = this.$dialog.find('.modal-wrapper');
+    this.$content = this.$dialog.find('.modal-content');
 
     this.open();
     this.initEvents();
@@ -86,20 +87,20 @@ var Modal = Widget.extend({
   open: function () {
     var _self = this;
     if (this.conf.onOpen) {
-      this.$wrapper.transitionEnd(function () {
+      this.$content.transitionEnd(function () {
         _self.conf.onOpen.call(_self);
       });
     }
 
     setTimeout(function () {
       _self.$mask.addClass('modal--visible');
-      _self.$wrapper.addClass('modal--visible');
+      _self.$content.addClass('modal--visible');
     }, 0);
   },
 
   close: function () {
     var _self = this;
-    this.$wrapper.removeClass('modal--visible');
+    this.$content.removeClass('modal--visible');
     this.$mask.removeClass('modal--visible').transitionEnd(function () {
       _self.destroy();
     });
